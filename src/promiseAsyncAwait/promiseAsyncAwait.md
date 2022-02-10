@@ -1,4 +1,5 @@
 ## Promise
+    - Giải quyết vấn đề callback hell viết việc đọc code và maintain dễ dàng hơn
     -The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. => đại diện cho việc hoàn thành hoặc thất bại của 1 thao tác bất đồng bộ.
     -A Promise is in one of these states:
         +pending: initial state, neither fulfilled nor rejected. => trạng thại khởi tạo

@@ -1,5 +1,5 @@
 // Example Promise
-let promiseTest =  new Promise((resolve, reject) => {
+let promiseTest =  new Promise((resolve, reject) => { //executor
     let xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
@@ -16,6 +16,15 @@ promiseTest
 
  
 console.log("Test Promise")
+
+// promise chain
+promiseTest
+    .then(json => {
+        console.log(json)
+        return promiseTest;
+    }).then(json => console.log(json)) // wait the promiseTest
+    .catch(err => console.log(err))
+
     
 /// Example async await
 

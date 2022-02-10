@@ -18,6 +18,7 @@
         + index Optional: The index (position) of the current element in the array.
         +array Optional: The array that find was called on. 
     - The reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
+    - forEach() duyệt qua từng phần tử của mảng.
 
 ## Lodash:
     -Lodash makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings.
