@@ -19,3 +19,6 @@
         +array Optional: The array that find was called on. 
     - The reduce((previousValue, currentValue, currentIndex, array) => { /* ... */ }, initialValue)
 
+## Lodash:
+    -Lodash makes JavaScript easier by taking the hassle out of working with arrays, numbers, objects, strings.
+

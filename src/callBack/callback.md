@@ -1,0 +1,3 @@
+## Callback Function
+    -A callback is a function which is called when a task is completed, thus helps in preventing any kind of blocking and a callback function allows other code to run in the meantime. Callback is called when task get completed and is asynchronous equivalent for a function. => hàm sẽ được gọi thì task hoàn thành, ngăn blocking cho phép các mã khác chạy trong thời gian chờ đợi.
+    - Xử lý bất đồng bộ.

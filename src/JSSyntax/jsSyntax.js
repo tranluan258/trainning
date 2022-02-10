@@ -6,7 +6,7 @@ console.log(obj.a)
 
 const stringifyJSON = JSON.stringify(obj)
 
-// console.log(stringifyJSON)
+console.log(stringifyJSON)
 
 // Array
 
@@ -43,5 +43,7 @@ console.log(sum);
 // reduce
 
 const resultReduce = a.reduce((pre,cur,index) => {return pre + cur}, 5)
+// if have initial value , the first start pre = initial value. cur = the first in array, index = 0
+// if not have initial value , the first start pre = the first in array . cur = the second in array, index = 1
 
 console.log(resultReduce)

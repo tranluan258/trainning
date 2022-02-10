@@ -16,7 +16,7 @@ setTimeout(() => {
 
 someAsyncOperation(() => {
   const startCallback = Date.now();
-  console.log("Hi");
+  
   while(Date.now() - startCallback < 100){
 
   }

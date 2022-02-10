@@ -38,9 +38,12 @@
     3. Your project also must include a package.json before any packages can be installed from NPM.
     4. dependencies: This is one of the most important fields in your package.json, and likely the entire reason you need one. All of the dependencies your project uses (the external code that the project relies on) are listed here
         + version is X.Y.Z with MAJOR.MINOR.PATCH
-        + ~version: `Approximately equivalent to version`, will update you to all future patch versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0 => Phiên bản tương tương
+        + Explained MAJOR: cập nhật phiên bản mới (release)
+        +MINOR: cập nhật tính năng mới.
+        +PATCH: fix bug.
+        + ~version: `Approximately equivalent to version`, will update you to all future PATCH versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0 => Phiên bản tương tương
 
-        + ^version: `Compatible with version`, will update you to all future minor/patch versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <3.0.0 => Phiên bản tương thích
+        + ^version: `Compatible with version`, will update you to all future MINOR/PATCH versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <3.0.0 => Phiên bản tương thích
     5. devDependencies: Similar to the dependencies field, but for packages which are only needed during development, and aren't needed in production.
 
 ## package-lock.json:
