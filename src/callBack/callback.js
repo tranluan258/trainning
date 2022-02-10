@@ -2,15 +2,27 @@ const fs = require("fs")
 
 function readFile(filename, callback){
     fs.readFile(filename,(err,data) => {
-        callback(data)
+        callback(err,data)
     })
 }
 
 
 console.log("Start")
 
-readFile("./callback.md", (data) => {
+readFile("./callback.md", (err,data) => {
     console.log(data)
 })
 
 console.log("End")
+
+
+// Example callback hell
+readFile("./callback.md", (err,data) => {
+    if (err) throw err;
+    readFile("./callback.js", (err,data) => {
+        if (err) throw err;
+        readFile("./callback.js", (err,data) => {
+            console.log(data)
+        })
+    })
+})

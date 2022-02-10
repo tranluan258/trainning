@@ -3,7 +3,7 @@
 ## Npm command
 
 ## npm install
-    1. npm install <package> : 
+    1. npm install <package> : example npm install express
         + Install the dependencies in the local node_modules folder
         + With tag `-g, -global` it installs the current package context as a global package.
         + By default, npm install will all modules list as dependencies in package.json
