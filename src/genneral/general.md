@@ -16,7 +16,7 @@
         + close callbacks: some close callbacks, e.g. socket.on('close', ...).
 ## Blocking, Non-Blocking
     1. Blocking: It refers to the blocking of further operation until the current operation finishes. Blocking methods are executed synchronously. Synchronously means that the program is executed line by line. The program waits until the called function or the operation returns. => chặn các hoạt động tiếp theo khi hoạt động này kết thúc.
-    2. Non-Blocking: It refers to the program that does not block the execution of further operations. Non-Blocking methods are executed asynchronously. Asynchronously means that the program may not necessarily execute line by line. The program calls the function and move to the next operation and does not wait for it to return. => không chặn hoạt động thực thi bất đồng bộ.
+    2. Non-Blocking: It refers to the program that does not block the execution of further operations. Non-Blocking methods are executed asynchronously. Asynchronously means that the program may not necessarily execute line by line. The program calls the function and move to the next operation and does not wait for it to return. => không chặn hoạt động,  thực thi bất đồng bộ.
     3. Dangers of Mixing Blocking and Non-Blocking Code
 ## Synchronous, Asynchronous 
     1. Synchronous programming means that the code runs in the sequence it is defined. In a synchronous program, when a function is called and has returned some value, only then will the next line be executed.

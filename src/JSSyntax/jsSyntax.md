@@ -1,10 +1,10 @@
 ## Js Syntax
 
 ## JSON
-    - JSON.parse(text[, reviver]): parse the string text as Json
+    - JSON.parse(text[, reviver]): parse the string text as Json => chuyển từ chuỗi là json sang javascript type
         + JSON.parse() does not allow trailing commas => không có phép dấu phẩy ở cuối.
         +JSON.parse() does not allow single quotes => không sử dụng dấu nháy đơn.
-    - JSON.stringify(value[, replacer[, space]]): Return a JSON string corresponding to the specified value.
+    - JSON.stringify(value[, replacer[, space]]): Return a JSON string corresponding to the specified value. chuyển javascript type sang Json
         + replacer:A function that alters the behavior of the stringification process, or an array of String and Number that serve as an allowlist for selecting/filtering the properties of the value object to be included in the JSON string.
 
 ## Array:

@@ -1,7 +1,7 @@
 // Blocking methods execute synchronously and non-blocking methods execute asynchronously.
 const fs = require("fs")
 
-const data = fs.readFileSync("./general.md")  // block here when read file done
+const data = fs.readFileSync("./general.md", {encoding: "utf-8"})  // block here when read file done
 console.log(data);
 
 

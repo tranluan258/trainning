@@ -2,9 +2,9 @@
     - Giải quyết vấn đề callback hell viết việc đọc code và maintain dễ dàng hơn
     -The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value. => đại diện cho việc hoàn thành hoặc thất bại của 1 thao tác bất đồng bộ.
     -A Promise is in one of these states:
-        +pending: initial state, neither fulfilled nor rejected. => trạng thại khởi tạo
-        +fulfilled: meaning that the operation was completed successfully.
-        +rejected: meaning that the operation failed.
+        +pending: initial state, neither fulfilled nor rejected. => trạng thái khởi tạo không có giá trị resolve hoặc reject
+        +fulfilled: meaning that the operation was completed successfully. => trả về resolve
+        +rejected: meaning that the operation failed. => trả về reject
     - The methods promise.then(), promise.catch(), and promise.finally() are used to associate further action with a promise that becomes settled.
         + then(): sẽ nhận giá trị khi resolve được gọi.
         + catch(): sẽ nhận giá trị khi reject được gọi.
@@ -12,6 +12,7 @@
     - Các static method thường dùng:
         + Promise.all(iterable): Wait for all promises to be resolved, or for any to be rejected.
         + Promise.resolve(value)
+        + Promise.reject(value)
 
 ## Async - Await
     - The async and await keywords enable asynchronous, promise-based behavior to be written in a cleaner style, avoiding the need to explicitly configure promise chains.

@@ -3,7 +3,7 @@ const fs = require("fs")
 
 function someAsyncOperation(callback) {
     
-    fs.readFile('./general.md', callback);
+    fs.readFile('./general.md', {encoding: "utf-8"}, callback);
 }
 
 const timeoutScheduled = Date.now();

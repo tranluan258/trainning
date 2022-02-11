@@ -1,7 +1,7 @@
 const fs = require("fs")
 
 function readFile(filename, callback){
-    fs.readFile(filename,(err,data) => {
+    fs.readFile(filename, {encoding: 'utf-8'},(err,data) => {
         callback(err,data)
     })
 }
