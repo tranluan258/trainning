@@ -10,6 +10,11 @@ let promiseTest =  new Promise((resolve, reject) => { //executor
     xmlHttp.send();
 })
 
+// Promise all 
+
+Promise.all([promiseTest,promiseTest,promiseTest])
+.then((res) => console.log(res[0])) // return array response 
+
 promiseTest
     .then(json => console.log(json))
     .catch(err => console.log(err))
@@ -34,6 +39,8 @@ async function testAsyncAwait(){
     }
 }
 
+
+// if the tasks are not dependent on each other can user await Promise.all([task1,task2,task3])
 async function testAsyncAwaitPromiseAll(){
     try {
         let  [result,result1,result2] =  await Promise.all([promiseTest,promiseTest,promiseTest])

@@ -19,10 +19,12 @@ console.log("End")
 // Example callback hell
 readFile("./callback.md", (err,data) => {
     if (err) throw err;
-    readFile("./callback.js", (err,data) => {
-        if (err) throw err;
+    if(data.length > 0 ){
         readFile("./callback.js", (err,data) => {
-            console.log(data)
+            if (err) throw err;
+            readFile("./callback.js", (err,data) => {
+                console.log(data)
+            })
         })
-    })
+    }
 })

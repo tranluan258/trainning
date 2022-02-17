@@ -17,3 +17,6 @@ console.log(d) // expected output [2,3,4]
 
 let drop = lodash .drop(a, 1); // Creates a slice of array with n elements dropped from the beginning.
 console.log(drop)
+
+const pullArr = lodash.pull(b, 1)
+console.log(pullArr)

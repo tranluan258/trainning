@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-function readFilePromise(path,) {
+function readFilePromise(path) {
     return new Promise(function (res,rej) {
         fs.readFile(path,{encoding:'utf8'},function (err,data) {
             if(err){

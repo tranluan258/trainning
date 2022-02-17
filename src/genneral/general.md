@@ -7,6 +7,7 @@
     + The event loop allows us to use callbacks and promises.
     + The event loop executes the tasks starting from the oldest first.
     + When Node.js starts, it initializes the event loop, processes the provided input script, which may make async API calls, schedule timers, then begins processing the event loop.
+    +Each phase has a FIFO queue of callbacks to execute. While each phase is special in its own way, generally, when the event loop enters a given phase, it will perform any operations specific to that phase, then execute callbacks in that phase's queue until the queue has been exhausted or the maximum number of callbacks has executed. When the queue has been exhausted or the callback limit is reached, the event loop will move to the next phase, and so on
     + Phases Overview:
         + timer: this phase executes callbacks scheduled by setTimeout() and setInterval().
         + pending callbacks: executes I/O callbacks deferred to the next loop iteration.
@@ -14,6 +15,9 @@
         + poll: retrieve new I/O events; execute I/O related callbacks (almost all with the exception of close callbacks, the ones scheduled by timers, and setImmediate()); node will block here when appropriate.
         + check: setImmediate() callbacks are invoked here.
         + close callbacks: some close callbacks, e.g. socket.on('close', ...).
+    +Phases important
+        + The poll phase has two main functions
+            +
 ## Blocking, Non-Blocking
     1. Blocking: It refers to the blocking of further operation until the current operation finishes. Blocking methods are executed synchronously. Synchronously means that the program is executed line by line. The program waits until the called function or the operation returns. => chặn các hoạt động tiếp theo khi hoạt động này kết thúc.
     2. Non-Blocking: It refers to the program that does not block the execution of further operations. Non-Blocking methods are executed asynchronously. Asynchronously means that the program may not necessarily execute line by line. The program calls the function and move to the next operation and does not wait for it to return. => không chặn hoạt động,  thực thi bất đồng bộ.

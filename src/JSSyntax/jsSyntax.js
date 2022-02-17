@@ -1,10 +1,10 @@
 // JSON
 const json = '{"a":true, "b":42}';
-const obj = JSON.parse(json); 
+const obj = JSON.parse(json); // parse Json to Javascript type
 
 console.log(obj.a)
 
-const stringifyJSON = JSON.stringify(obj)
+const stringifyJSON = JSON.stringify(obj) // convert Javascript type to JSON
 
 console.log(stringifyJSON)
 
@@ -47,3 +47,12 @@ const resultReduce = a.reduce((pre,cur,index) => {return pre + cur}, 5)
 // if not have initial value , the first start pre = the first in array . cur = the second in array, index = 1
 
 console.log(resultReduce)
+
+//find
+// parameter is one callback function with (value.index,arr[]) => return value of first element 
+const findMethod  = a.find((el,index) => el === 2)
+console.log(findMethod)
+
+//findIndex
+// parameter is one callback function with (value.index,arr[]) => return index that satisfies the provided if not return -1
+const findIndexMethod = a.findIndex((el,index) => el === 1)
