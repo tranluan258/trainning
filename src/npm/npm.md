@@ -41,6 +41,8 @@
         + Explained MAJOR: cập nhật phiên bản mới (release)
         +MINOR: cập nhật tính năng mới.
         +PATCH: fix bug.
+        +^ => update MINOR va PATH đến latest của MAJOR
+        + ~ => update PATH only
         + ~version: `Approximately equivalent to version`, will update you to all future PATCH versions, without incrementing the minor version. ~1.2.3 will use releases from 1.2.3 to <1.3.0 => Phiên bản tương tương
 
         + ^version: `Compatible with version`, will update you to all future MINOR/PATCH versions, without incrementing the major version. ^2.3.4 will use releases from 2.3.4 to <3.0.0 => Phiên bản tương thích

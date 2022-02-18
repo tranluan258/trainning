@@ -31,7 +31,6 @@ console.log(resultMap)
 
 // forEach
 let sum = 0;
-
 const sumFunction =  (a, b) => a + b;
 
 a.forEach( (element) => { // duyệt qua từng element của mảng
