@@ -16,7 +16,7 @@ app.post('/login', (req, res) => {
     if(username == "luan") {
         let payload  = {username: username}
         jwt.sign(payload,"secret", {expiresIn: "1m"}, (err, token) => {
-            res.send(token)
+            res.json(token)
         })
     }
 })

@@ -1,37 +1,23 @@
 const express =  require('express')
+const fs = require('fs')
 
 const app = express()
 
-let arr = [
-    {
-        id: 1,
-        username: 'foo'
-    },
-    {
-        id: 2,
-        username: 'der'
-    },
-    {
-        id: 3,
-        username: 'dfe'
-    },
-    {
-        id: 4,
-        username: 'abc'
-    }
-]
+let arr = fs.readFileSync("./data.json", {encoding: "utf8"})
+
 
 app.get('/', (req, res) => {
-    res.json(arr)
+    res.json(JSON.parse(arr))
 })
 
 app.post('/', (req, res) => {
+    let data = JSON.parse(arr)
     let user = {
-        id: arr.length + 1,
+        id: data.length + 1,
         username: "arr"
     }
-    arr.push(user)
-    res.json(arr)
+    data.push(user)
+    res.json(data)
 })
 
 app.put('/:id', (req, res) => {
@@ -41,14 +27,14 @@ app.put('/:id', (req, res) => {
             user.username = "update"
         }
     })
-    res.json(arr)
+    res.json(JSON.parse(arr))
 })
 
 app.delete('/:id', (req, res) => {
     const id = req.params.id
     let index = arr.findIndex(user => user.id.toString() === id)
     arr.splice(index, 1)
-    res.json(arr)
+    res.json(JSON.parse(arr))
 })
 
 app.listen(3000, () => console.log('listening on port 3000'))

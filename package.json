@@ -17,9 +17,18 @@
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "winston": "^3.6.0"
+    "puppeteer": "^13.4.0",
+    "winston": "^3.6.0",
+    "yargs": "^13.2.4"
   },
   "devDependencies": {
-    "nodemon": "^2.0.15"
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.4.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
   }
 }

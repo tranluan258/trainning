@@ -1,7 +1,7 @@
 const express =  require('express')
 const app = express()
 
-app.use(express.json({inflate: false, reviver: (key, value) => {
+app.use(express.json({reviver: (key, value) => {
     if(typeof value === 'string' && key === 'date') { //check value body, convert date from  frontend
         const valueDate = new Date(value).getTime();
             if(!isNaN(valueDate)){
