@@ -1,11 +1,19 @@
-const yargs = require('yargs')
 const fs = require('fs')
+// const yargs = require('yargs')
+const INDEX_COMMAND_LINE = 2;
+// eslint-disable-next-line no-undef
+let path = process.argv[INDEX_COMMAND_LINE];
 
-const options = yargs
- .usage("Usage: -n <name>")
- .option("n", { alias: "path", describe: "Path file", type: "string", demandOption: true })
- .argv;
+// eslint-disable-next-line no-undef
+console.log("Process agrv:" ,process.argv);
 
-fs.readFile(options.path, {encoding: "utf-8"}, (err,data) => {
-    console.log(data)
-})
+if(path) {
+    try {
+        let data = fs.readFileSync(path, 'utf8')
+        console.log(data)
+    } catch (err) {
+        console.error("Error:", err)
+    }
+}else {
+    console.log("Please enter path in command line")
+}

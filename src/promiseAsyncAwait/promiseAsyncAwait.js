@@ -1,4 +1,5 @@
 // Example Promise
+// eslint-disable-next-line no-unused-vars
 let promiseTest =  new Promise((resolve, reject) => { //executor
     let xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function() {
@@ -30,6 +31,7 @@ promiseTest
     
 /// Example async await
 
+// eslint-disable-next-line no-unused-vars
 async function testAsyncAwait(){
     try {
         let result  =  await promiseTest; // phần resolve  blocking

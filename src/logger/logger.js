@@ -7,11 +7,13 @@ const myFormat = printf(({ level, message, timestamp }) => {
   
 const logger = createLogger({
     format: combine(
-        format.colorize(),
         timestamp({format: "YYYY-MM-DD HH:mm:ss"}),
         myFormat
     ),
-    transports: [new transports.Console()]
+    transports: [
+        new transports.Console(),
+        new transports.File({filename: './logging.log'})
+    ]
 });
 
 module.exports = logger

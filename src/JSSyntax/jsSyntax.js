@@ -41,7 +41,7 @@ console.log(sum);
 
 // reduce
 
-const resultReduce = a.reduce((pre,cur,index) => {return pre + cur}, 5)
+const resultReduce = a.reduce((pre,cur) => {return pre + cur}, 5)
 // if have initial value , the first start pre = initial value. cur = the first in array, index = 0
 // if not have initial value , the first start pre = the first in array . cur = the second in array, index = 1
 
@@ -49,9 +49,10 @@ console.log(resultReduce)
 
 //find
 // parameter is one callback function with (value.index,arr[]) => return value of first element 
-const findMethod  = a.find((el,index) => el === 2)
+const findMethod  = a.find((el) => el === 2)
 console.log(findMethod)
 
 //findIndex
 // parameter is one callback function with (value.index,arr[]) => return index that satisfies the provided if not return -1
-const findIndexMethod = a.findIndex((el,index) => el === 1)
+// eslint-disable-next-line no-unused-vars
+const findIndexMethod = a.findIndex((el) => el === 1)

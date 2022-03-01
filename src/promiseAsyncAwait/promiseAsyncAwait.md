@@ -21,3 +21,5 @@
     - Awaiting a promise to be fulfilled
     - If the value is not a Promise, it converts the value to a resolved Promise, and waits for it.
     - Phần reject của promise sẽ được bắt lỗi trong phần catch của try catch khi sử dụng async await.
+    - Nếu data phụ thuộc thì sử dụng async await
+    - Nếu data không phụ thuộc thì sử dụng Promise all
